@@ -1,0 +1,68 @@
+$width: 80px
+$height: 48px
+$label-width: 20px
+$label-height: 20px
+
+
+.sheet
+	position: relative
+	//padding-left: $label-width
+	//padding-top: $label-height
+	display: flex
+
+.sheet__row-labels
+	position: absolute
+	left: -$label-width
+	top: 0
+	bottom: 0
+	display: flex
+	flex-direction: column
+
+	&__row
+		height: $height
+		width: $label-width
+		display: flex
+		justify-content: center
+		align-items: center
+
+
+.sheet__col-labels
+	position: absolute
+	left: 0
+	right: 0
+	top: -$label-height
+	display: flex
+	flex-direction: row
+
+	&__col
+		height: $label-height
+		width: $width
+		display: flex
+		justify-content: center
+		align-items: center
+
+.row
+	border-bottom: 1px solid #ddd
+	display: flex
+	flex-direction: row
+
+	&:first-of-type
+		border-top: 1px solid #ddd
+
+
+.col
+	padding: 2px
+	width: $width
+	height: $height
+	display: flex
+	justify-content: center
+	align-items: center
+	border-right: 1px solid #ddd
+	position: relative
+
+	&:first-of-type
+		border-left: 1px solid #ddd
+
+
+	&__edit
+		position: absolute
